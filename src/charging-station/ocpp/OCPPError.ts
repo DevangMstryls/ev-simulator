@@ -1,18 +1,17 @@
-import { IncomingRequestCommand, RequestCommand } from '../../types/ocpp/Requests';
-
 import BaseError from '../../exception/BaseError';
-import { ErrorType } from '../../types/ocpp/ErrorType';
+import {ErrorType} from '../../types/ocpp/ErrorType';
+import {IncomingRequestCommand, RequestCommand} from '../../types/ocpp/Requests';
 
 export default class OCPPError extends BaseError {
-  code: ErrorType | IncomingRequestCommand;
-  command?: RequestCommand | IncomingRequestCommand;
-  details?: Record<string, unknown>;
+    code: ErrorType | IncomingRequestCommand;
+    command?: RequestCommand | IncomingRequestCommand;
+    details?: Record<string, unknown>;
 
-  constructor(code: ErrorType | IncomingRequestCommand, message: string, command?: RequestCommand | IncomingRequestCommand, details?: Record<string, unknown>) {
-    super(message);
+    constructor(code: ErrorType | IncomingRequestCommand, message: string, command?: RequestCommand | IncomingRequestCommand, details?: Record<string, unknown>) {
+        super(message);
 
-    this.code = code ?? ErrorType.GENERIC_ERROR;
-    this.command = command;
-    this.details = details ?? {};
-  }
+        this.code = code ?? ErrorType.GENERIC_ERROR;
+        this.command = command;
+        this.details = details ?? {};
+    }
 }

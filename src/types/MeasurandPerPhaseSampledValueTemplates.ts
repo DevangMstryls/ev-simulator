@@ -1,7 +1,7 @@
-import { SampledValueTemplate } from './Connectors';
+import {SampledValueTemplate} from './Connectors';
 
 export default interface MeasurandPerPhaseSampledValueTemplates {
-  L1?: SampledValueTemplate;
-  L2?: SampledValueTemplate;
-  L3?: SampledValueTemplate;
+    L1?: SampledValueTemplate;
+    L2?: SampledValueTemplate;
+    L3?: SampledValueTemplate;
 }

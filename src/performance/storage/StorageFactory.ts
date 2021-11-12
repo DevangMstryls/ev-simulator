@@ -1,31 +1,30 @@
-import { JSONFileStorage } from './JSONFileStorage';
-import { MikroORMStorage } from './MikroORMStorage';
-import { MongoDBStorage } from './MongoDBStorage';
-import { Storage } from './Storage';
-import { StorageType } from '../../types/Storage';
+import {StorageType} from '../../types/Storage';
+import {JSONFileStorage} from './JSONFileStorage';
+import {MongoDBStorage} from './MongoDBStorage';
+import {Storage} from './Storage';
 
 export class StorageFactory {
-  private constructor() {
-    // This is intentional
-  }
-
-  public static getStorage(type: StorageType, connectionURI: string, logPrefix: string): Storage {
-    let storageInstance: Storage = null;
-    switch (type) {
-      case StorageType.JSON_FILE:
-        storageInstance = new JSONFileStorage(connectionURI, logPrefix);
-        break;
-      case StorageType.MONGO_DB:
-        storageInstance = new MongoDBStorage(connectionURI, logPrefix);
-        break;
-      // case StorageType.MYSQL:
-      // case StorageType.MARIA_DB:
-      // case StorageType.SQLITE:
-      //   storageInstance = new MikroORMStorage(connectionURI, logPrefix, type);
-      //   break;
-      default:
-        throw new Error(`${logPrefix} Unknown storage type: ${type}`);
+    private constructor() {
+        // This is intentional
     }
-    return storageInstance;
-  }
+
+    public static getStorage(type: StorageType, connectionURI: string, logPrefix: string): Storage {
+        let storageInstance: Storage = null;
+        switch (type) {
+            case StorageType.JSON_FILE:
+                storageInstance = new JSONFileStorage(connectionURI, logPrefix);
+                break;
+            case StorageType.MONGO_DB:
+                storageInstance = new MongoDBStorage(connectionURI, logPrefix);
+                break;
+            // case StorageType.MYSQL:
+            // case StorageType.MARIA_DB:
+            // case StorageType.SQLITE:
+            //   storageInstance = new MikroORMStorage(connectionURI, logPrefix, type);
+            //   break;
+            default:
+                throw new Error(`${logPrefix} Unknown storage type: ${type}`);
+        }
+        return storageInstance;
+    }
 }

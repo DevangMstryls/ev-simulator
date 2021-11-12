@@ -1,8 +1,8 @@
 {
-  "publicFlag": true,
-  "tenantIDs": [
-    ""
-  ],
-  "idPattern": "",
-  "mongoConnectionString": "mongodb://..."
+    "publicFlag": true,
+    "tenantIDs": [
+        ""
+    ],
+    "idPattern": "",
+    "mongoConnectionString": "mongodb://..."
 }

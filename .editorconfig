@@ -2,13 +2,14 @@ root = true
 
 [*]
 indent_style = space
-indent_size = 2
-tab_width = 2
+indent_size = 4
+tab_width = 4
 charset = utf-8
 trim_trailing_whitespace = true
 insert_final_newline = true
 end_of_line = lf
 max_line_length = 100
+ij_any_else_on_new_line = true
 
 [*.ts{,x}]
 quote_type = single

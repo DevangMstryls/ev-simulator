@@ -1,25 +1,22 @@
-import { Collection, Entity, OneToMany, PrimaryKey, Property } from '@mikro-orm/core';
-
-import { PerformanceData } from './PerformanceData';
+import {Entity} from '@mikro-orm/core';
 
 @Entity()
 export class PerformanceRecord {
-  // @PrimaryKey()
-  // pk!: number;
+    // @PrimaryKey()
+    // pk!: number;
 
-  // @Property()
-  // id!: string;
+    // @Property()
+    // id!: string;
 
-  // @Property()
-  // URI!: string;
+    // @Property()
+    // URI!: string;
 
-  // @Property()
-  // createdAt!: Date;
+    // @Property()
+    // createdAt!: Date;
 
-  // @Property()
-  // updatedAt?: Date;
+    // @Property()
+    // updatedAt?: Date;
 
-  // @OneToMany('PerformanceData', 'performanceRecord')
-  // performanceData?= new Collection<PerformanceData>(this);
+    // @OneToMany('PerformanceData', 'performanceRecord')
+    // performanceData?= new Collection<PerformanceData>(this);
 }
-

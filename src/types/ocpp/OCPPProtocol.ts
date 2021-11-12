@@ -1,4 +1,4 @@
 export enum OCPPProtocol {
-  SOAP = 'soap',
-  JSON = 'json',
+    SOAP = 'soap',
+    JSON = 'json',
 }
